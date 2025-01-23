@@ -9,7 +9,6 @@ extern "C" {
 
 /**
  * @brief A node in the list
- *
  */
 typedef struct node {
     void *data;
@@ -23,10 +22,10 @@ typedef struct node {
  * user of this library.
  */
 typedef struct list {
-    void (*destroy_data)(void *);                  /*free's any memory that data allocated*/
-    int (*compare_to)(const void *, const void *); /* returns 0 if data are the same*/
+    void (*destroy_data)(void *);                  /* free's any memory that data allocated */
+    int (*compare_to)(const void *, const void *); /* returns 0 if data are the same */
     size_t size;                                   /* How many elements are in the list */
-    struct node *head;                             /* sentinel node*/
+    struct node *head;                             /* sentinel node */
 } list_t;
 
 /**

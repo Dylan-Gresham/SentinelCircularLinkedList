@@ -1,0 +1,6 @@
+[package]
+name = "sentinel_circular_linked_list"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
