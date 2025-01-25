@@ -1,4 +1,4 @@
-# Makefile Project Template
+# Circular Linked List with Sentinel Node
 
 Steps to configure, build, run, and test the project.
 
