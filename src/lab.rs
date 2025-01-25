@@ -2,9 +2,16 @@ use std::cell::RefCell;
 use std::fmt::Display;
 use std::rc::Rc;
 
+/// Custom type to make the `Node` struct more readable.
+///
+/// Shorthand for a Reference Counted pointer (`Rc`) holding a Reference Cell (`RefCell`) which keeps
+/// track of how many References (`Ref<T>`) and Mutable References (`RefMut<T>`) exist of the stored
+/// `Node<T>`.
 type Link<T> = Option<Rc<RefCell<Node<T>>>>;
 
 /// A node in the list.
+///
+/// Each node will store data and links to the next and previous nodes.
 #[derive(PartialEq, Debug)]
 pub struct Node<T: PartialEq + Default + Display> {
     pub data: T,
