@@ -1,4 +1,4 @@
-all: clean build check run
+all: clean build docs-no-open check run
 
 .PHONY: clean
 clean:
@@ -12,6 +12,12 @@ check:
 
 run:
 	@cargo -q run --release
+
+docs:
+	@cargo -q doc --open
+
+docs-no-open:
+	@cargo -q doc
 
 .PHONY: install-deps
 install-deps:

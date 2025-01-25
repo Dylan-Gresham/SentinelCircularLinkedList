@@ -7,7 +7,7 @@ use std::rc::Rc;
 /// Shorthand for a Reference Counted pointer (`Rc`) holding a Reference Cell (`RefCell`) which keeps
 /// track of how many References (`Ref<T>`) and Mutable References (`RefMut<T>`) exist of the stored
 /// `Node<T>`.
-type Link<T> = Option<Rc<RefCell<Node<T>>>>;
+pub type Link<T> = Option<Rc<RefCell<Node<T>>>>;
 
 /// A node in the list.
 ///

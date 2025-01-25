@@ -1,4 +1,4 @@
-mod lab;
+pub mod lab;
 
 fn main() {
     println!("This program doesn't actually do anything.\n");
